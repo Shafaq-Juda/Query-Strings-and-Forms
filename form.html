@@ -1,0 +1,42 @@
+<h1>Query String and Forms</h1>
+
+<p>1. Form as a <a> link </p>
+<form action="https://en.wikipedia.org/wiki/Chicago">
+<button>Go to Wikipedia</button>
+</form>
+
+<p>2. Form with input text box</p>
+<p>Form input must have a name attribute</p>
+<form action="https://en.wikipedia.org/wiki/Chicago">
+  <input type = "text" name="name">
+  <button>Go to Wikipedia</button>
+  </form>
+
+  <p>3. Form with input must have a label element</p>
+  <p>Form label have the for attribute which must have the same value as per input id</p>
+  <form action="https://abc@gmail.com">
+    <label for ="email_id">Your E-mail</label>
+    <input type = "text" name="email" id="email_id">
+    <button>Submit</button>
+    </form>
+
+    <p>4. Last example</p>
+    <form action="/process_form">
+        <label for="fruit_id">Fruit</label>
+        <input id="fruit_id" name="fruit" type="text">
+        <label for="color_id">Color</label>
+        <input id="color_id" name="color" type="text">
+        <button>Submit</button>
+    </form>
+
+    <h1>For the above form:</h1>
+      <h2>The form will be submitted to:</h2>
+     <p> /process_form?fruit=kiwi&color=green</p>
+      
+      <h2>The query string is:<h2>
+    <p>?fruit=kiwi&color=green</p>
+    <p>(If the user enter kiwi in the first input box and green in the second input box)</p>
+    <h>Sinatra and Rails read this query string and each name/value pair into params Hash as:<h2>
+      <p>{"fruit" => "kiwi", "color" => "green"</p>
+
+      <h2>Thats all for Now</h2>
